@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Topico {
 
-	private Long id;
+	private Integer id;
 	private String titulo;
 	private String mensagem;
 	private LocalDateTime dataCriacao = LocalDateTime.now();
@@ -46,11 +46,11 @@ public class Topico {
 		return true;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

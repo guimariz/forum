@@ -1,4 +1,4 @@
-package br.com.forum.repository;
+package br.com.forum.controller.repository;
 
 import java.util.List;
 

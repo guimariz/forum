@@ -2,12 +2,24 @@ package br.com.forum.modelo;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Resposta {
 
-	private Long id;
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	private String mensagem;
+	
+	@ManyToOne
 	private Topico topico;
 	private LocalDateTime dataCriacao = LocalDateTime.now();
+	
+	@ManyToOne
 	private Usuario autor;
 	private Boolean solucao = false;
 
@@ -36,11 +48,11 @@ public class Resposta {
 		return true;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
